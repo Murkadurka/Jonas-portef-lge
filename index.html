@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jonas Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* VIDEO */
+        #bg-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        /* DARK OVERLAY */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            z-index: -1;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            animation: fadeIn 2s ease-in;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            letter-spacing: 3px;
+        }
+
+        .hero p {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #cccccc;
+        }
+
+        .hero button {
+            margin-top: 40px;
+            padding: 15px 30px;
+            font-size: 18px;
+            background: #4CAF50;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .hero button:hover {
+            transform: scale(1.1);
+            background: #45a049;
+        }
+
+        /* SECOND SECTION */
+        .section {
+            height: 100vh;
+            background: #111;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 40px;
+        }
+
+        /* ANIMATION */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+    </style>
+</head>
+
+<body>
+       
+    <!-- VIDEO -->
+    <video autoplay muted loop id="bg-video">
+        <source src="bilde.mp4" type="video/mp4">
+    </video>
+
+    <div class="overlay"></div>
+
+    <!-- HERO -->
+    <div class="hero">
+        <h1>JONAS</h1>
+        <p>Elektriker • Brannmann • Superhelt</p>
+        <button onclick="document.getElementById('about').scrollIntoView()">
+            Se mer ↓
+        </button>
+    </div>
+
+    <!-- NEXT SECTION -->
+
+
+
+    <div class="section" id="about">
+        <h2>Om meg</h2>
+        <p>
+            Jeg kan alt og tar aldri feil
+        </p>
+
+    </div>
+
+</body>
+</html>
